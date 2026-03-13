@@ -2,6 +2,14 @@
 
 Common layout recipes for Textual applications.
 
+## Contents
+- [Layout Types](#layout-types) — Vertical, Horizontal, Grid, Dock
+- [Common Patterns](#common-patterns) — Split Screen, Three-Column, Dashboard Grid, Centred, Scrollable, Tabbed
+- [Sizing & Spacing](#sizing--spacing) — units, padding, margin (see styling.md)
+- [Responsive Layouts](#responsive-layouts) — container queries, conditional layouts
+- [Advanced Patterns](#advanced-patterns) — Modal overlay, Sidebar Toggle, Masonry, Resizable Split
+- [Layout Debugging](#layout-debugging)
+
 ## Layout Types
 
 ### Vertical (Default)
@@ -297,102 +305,11 @@ class TabbedApp(App):
                 yield Label("Settings content")
 ```
 
-## Sizing Strategies
+## Sizing & Spacing
 
-### Fixed Sizes
+For CSS units (`fr`, `%`, `auto`, `min-width`, etc.), padding, margin, and alignment properties — see [styling.md](styling.md#dimensions).
 
-Absolute dimensions:
-```css
-#widget {
-    width: 40;   /* 40 columns */
-    height: 20;  /* 20 rows */
-}
-```
-
-### Fractional Units
-
-Proportional sizing:
-```css
-#sidebar {
-    width: 1fr;  /* 1 part */
-}
-
-#content {
-    width: 3fr;  /* 3 parts (3x sidebar) */
-}
-```
-
-### Percentage
-
-Relative to parent:
-```css
-#widget {
-    width: 50%;   /* Half of parent width */
-    height: 100%; /* Full parent height */
-}
-```
-
-### Auto Sizing
-
-Size to content:
-```css
-#widget {
-    width: auto;  /* Width matches content */
-    height: auto; /* Height matches content */
-}
-```
-
-### Min/Max Constraints
-
-Bounded sizing:
-```css
-#widget {
-    width: 1fr;
-    min-width: 30;
-    max-width: 80;
-}
-```
-
-## Spacing and Alignment
-
-### Padding
-
-Space inside widget:
-```css
-#widget {
-    padding: 1;          /* All sides */
-    padding: 1 2;        /* Vertical Horizontal */
-    padding: 1 2 1 2;    /* Top Right Bottom Left */
-    padding-top: 1;      /* Individual sides */
-}
-```
-
-### Margin
-
-Space outside widget:
-```css
-#widget {
-    margin: 1;
-    margin: 0 2;         /* No vertical, 2 horizontal */
-    margin-left: 1;
-}
-```
-
-### Alignment
-
-Position within container:
-```css
-Container {
-    align: center middle;     /* Horizontal Vertical */
-    align: left top;
-    align: right bottom;
-}
-
-/* Content alignment (for containers) */
-Container {
-    content-align: center middle;
-}
-```
+Quick reference: use `1fr` for "take remaining space", `%` for relative sizing, fixed integers for columns/rows.
 
 ## Responsive Layouts
 

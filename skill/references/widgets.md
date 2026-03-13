@@ -2,6 +2,16 @@
 
 Comprehensive examples of all built-in Textual widgets.
 
+## Contents
+- [Basic Widgets](#basic-widgets) — Label, Static, Button
+- [Input Widgets](#input-widgets) — Input, TextArea, Select, Checkbox, RadioButton, Switch
+- [Data Display](#data-display-widgets) — DataTable, Tree, ListView, Log/RichLog, ProgressBar, Sparkline
+- [Navigation](#navigation-widgets) — Header/Footer, TabbedContent, ContentSwitcher, OptionList
+- [Loading](#loading-widgets) — LoadingIndicator, Placeholder
+- [Special](#special-widgets) — Markdown, DirectoryTree
+- [Custom Widgets](#custom-widget-example)
+- [Composition Patterns](#widget-composition-patterns) — Form, Dashboard
+
 ## Basic Widgets
 
 ### Label
